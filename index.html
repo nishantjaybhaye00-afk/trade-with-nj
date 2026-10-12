@@ -1,92 +1,182 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Trade With NJ — a practical trading education PDF focused on rules, chart examples and risk management.">
-<title>Trade With NJ | Trading Strategy Guide</title>
-<style>
-:root{--bg:#090a0d;--panel:#111319;--panel2:#171a21;--gold:#e4bd62;--gold2:#f5d98f;--text:#f6f3eb;--muted:#b0b2bb;--line:#2a2d35}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#292111 0,transparent 32%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
-a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--line)}.brand{font-weight:850;letter-spacing:.08em;font-size:1rem}.brand span{color:var(--gold)}.nav a{font-size:.92rem;text-decoration:none;color:var(--muted);margin-left:22px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:44px;align-items:center;padding:74px 0 64px}.eyebrow{display:inline-block;border:1px solid #5b4a27;background:#211b10;color:var(--gold2);border-radius:99px;padding:6px 12px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.04;letter-spacing:-.055em;margin:20px 0}.hero h1 em{font-style:normal;color:var(--gold)}.lead{font-size:1.12rem;color:var(--muted);max-width:610px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:10px;font-weight:750;text-decoration:none;border:1px solid var(--gold);transition:.15s}.btn.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#18130a}.btn.secondary{color:var(--text);border-color:#484b53;background:#14161c}.btn:hover{transform:translateY(-2px)}.small{font-size:.84rem;color:var(--muted);margin-top:14px}.visual{border:1px solid #4a3d23;border-radius:24px;padding:25px;background:linear-gradient(145deg,#1c1a15,#101218 58%);box-shadow:0 25px 80px #0008;position:relative;overflow:hidden}.visual:before{content:"";position:absolute;width:220px;height:220px;background:#d6a94320;border-radius:50%;right:-65px;top:-70px;filter:blur(6px)}.book{position:relative;min-height:350px;border:1px solid #8c713b;border-radius:12px;padding:27px;background:linear-gradient(150deg,#171819,#08090c);display:flex;flex-direction:column;justify-content:space-between;box-shadow:10px 12px 0 #050506}.book .mark{color:var(--gold);letter-spacing:.2em;font-size:.7rem;font-weight:800}.book h2{font-size:2.1rem;line-height:1.08;margin:18px 0;max-width:300px}.book p{color:#c0b9a8;font-size:.9rem}.chart{height:95px;display:flex;align-items:end;gap:7px;border-bottom:1px solid #55482d;padding:0 8px}.candle{width:12px;border-radius:2px 2px 0 0;position:relative;background:var(--gold)}.candle:before{content:"";position:absolute;width:2px;height:calc(100% + 18px);left:5px;top:-9px;background:var(--gold)}.candle:nth-child(3n){background:#4ebc94}.candle:nth-child(3n):before{background:#4ebc94}.section{padding:58px 0}.section h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.035em;margin:0 0 10px}.sub{color:var(--muted);max-width:680px;margin:0 0 28px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}.ico{width:42px;height:42px;display:grid;place-items:center;background:#292213;color:var(--gold);border-radius:12px;font-size:1.2rem}.card h3{margin:15px 0 7px}.card p{color:var(--muted);margin:0;font-size:.95rem}.buybox{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;border:1px solid #6a542a;background:linear-gradient(120deg,#1b1914,#111319);border-radius:20px;padding:28px}.price{font-size:2.8rem;font-weight:900;line-height:1;color:var(--gold2)}.price small{display:block;font-size:.82rem;color:var(--muted);font-weight:500;margin-top:8px}.steps{counter-reset:steps;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:20px;border-top:1px solid #6d572c;background:#111319;border-radius:0 0 12px 12px}.step:before{counter-increment:steps;content:"0" counter(steps);color:var(--gold);font-weight:900;letter-spacing:.1em}.step h3{margin:9px 0 6px}.step p{color:var(--muted);margin:0}.notice{border-left:3px solid var(--gold);padding:12px 16px;background:#15140f;color:#c8c4b9;font-size:.9rem}.faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}.faq details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:17px}.faq summary{cursor:pointer;font-weight:750}.faq p{color:var(--muted);margin-bottom:0}.footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--muted);font-size:.84rem}.footerlinks{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:14px}.footer a{color:var(--muted)}@media(max-width:760px){.hero{grid-template-columns:1fr;padding:45px 0}.visual{max-width:480px}.grid,.steps{grid-template-columns:1fr}.buybox{grid-template-columns:1fr}.nav a{margin-left:12px}.faq{grid-template-columns:1fr}.book{min-height:300px}.nav .navlinks a:first-child{display:none}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Trade With NJ — a practical trading education guide focused on setup rules, risk management and disciplined execution.">
+  <title>Trade With NJ — Trade With Structure</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{--bg:#080a0b;--panel:#101314;--panel2:#151817;--gold:#d8b56d;--gold2:#f1d99c;--text:#f5f3ed;--muted:#a4a69f;--line:rgba(231,213,169,.16);--green:#9bc8a2}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    .topline{height:3px;background:linear-gradient(90deg,#80652e,var(--gold2),#8e6e32)}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,10,11,.88);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:12px;font-family:Manrope,sans-serif;font-weight:800;letter-spacing:-.6px}
+    .mark{width:36px;height:36px;border:1px solid #b8944e;border-radius:11px;display:grid;place-items:center;color:var(--gold2);font-size:14px;background:linear-gradient(135deg,#2a2418,#111)}
+    .brand small{display:block;color:var(--muted);font:500 9px 'DM Sans',sans-serif;letter-spacing:2.4px;text-transform:uppercase;margin-top:-3px}
+    .navlinks{display:flex;align-items:center;gap:28px;color:#c4c4bc;font-size:13px}
+    .navlinks a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:8px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#17130a;font-weight:800;font-size:13px;border:1px solid #e5c77e;transition:transform .2s,filter .2s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+    .btn-ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.18)}
+    .hero{position:relative;overflow:hidden;padding:100px 0 86px;border-bottom:1px solid var(--line)}
+    .hero:before{content:"";position:absolute;width:600px;height:600px;right:-150px;top:-120px;border-radius:50%;background:radial-gradient(circle,rgba(184,145,67,.13),rgba(184,145,67,0) 68%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:66px;position:relative}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--gold2);font-size:10px;letter-spacing:2.4px;text-transform:uppercase;font-weight:700}
+    .eyebrow:before{content:"";width:25px;height:1px;background:var(--gold)}
+    h1,h2,h3{font-family:Manrope,sans-serif;line-height:1.13;letter-spacing:-1.7px;margin:0}
+    h1{font-size:clamp(44px,5.5vw,72px);font-weight:700;margin:22px 0}
+    h1 span{color:var(--gold2)}
+    .lead{font-size:16px;color:#b8bab4;max-width:530px;line-height:1.85}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .micro{font-size:11px;color:#81847d;margin-top:18px}
+    .terminal{border:1px solid rgba(216,181,109,.27);border-radius:18px;padding:18px;background:linear-gradient(145deg,rgba(25,27,25,.97),rgba(11,13,13,.97));box-shadow:0 25px 90px rgba(0,0,0,.35);transform:rotate(1deg)}
+    .terminal-top{display:flex;align-items:center;justify-content:space-between;padding:0 2px 15px;border-bottom:1px solid var(--line);font-size:10px;letter-spacing:1.5px;color:#9fa198;text-transform:uppercase}
+    .live{color:var(--green);letter-spacing:1px}.live:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--green);margin:0 7px 1px 0}
+    .chart{width:100%;height:auto;display:block;margin:16px 0 8px}
+    .chart-caption{display:flex;justify-content:space-between;color:#a9aaa2;font-size:10px;letter-spacing:.5px}
+    .statrow{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:20px}
+    .stat{padding:13px;background:#151816;border:1px solid rgba(255,255,255,.06);border-radius:9px}
+    .stat b{display:block;font:700 17px Manrope,sans-serif;color:var(--gold2)}.stat span{font-size:9px;color:#8e918a;letter-spacing:1px;text-transform:uppercase}
+    .ticker{border-bottom:1px solid var(--line);background:#0d0f0f}
+    .ticker-inner{display:flex;justify-content:space-between;gap:20px;padding:16px 0;color:#a7a79f;font-size:10px;letter-spacing:1.8px;text-transform:uppercase;flex-wrap:wrap}
+    .ticker strong{color:var(--gold2);font-weight:600}
+    section{padding:88px 0}
+    .section-head{max-width:650px;margin-bottom:38px}
+    .section-head h2{font-size:clamp(30px,4vw,46px);margin:15px 0}
+    .section-head p{color:var(--muted);margin:0}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .feature{padding:26px 24px;border:1px solid rgba(255,255,255,.09);background:linear-gradient(145deg,#121514,#0c0e0e);border-radius:13px;min-height:210px}
+    .number{font-size:11px;letter-spacing:2px;color:var(--gold);margin-bottom:28px}
+    .feature h3{font-size:19px;letter-spacing:-.5px;margin-bottom:10px}
+    .feature p{font-size:13px;color:#a5a79f;margin:0;line-height:1.8}
+    .offer{padding:0 0 88px}
+    .offer-card{border:1px solid rgba(216,181,109,.36);border-radius:18px;overflow:hidden;background:radial-gradient(ellipse at 100% 0%,rgba(177,136,55,.14),transparent 48%),#101312;display:grid;grid-template-columns:1.2fr .8fr}
+    .offer-copy{padding:44px}
+    .offer-copy h2{font-size:clamp(32px,4vw,44px);margin:15px 0}
+    .offer-copy p{color:var(--muted);max-width:560px}
+    .checks{padding:0;list-style:none;margin:25px 0 30px;display:grid;gap:12px;color:#d2d2ca;font-size:13px}
+    .checks li:before{content:"✓";color:var(--gold2);margin-right:11px}
+    .price-panel{border-left:1px solid var(--line);padding:42px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;background:rgba(0,0,0,.12)}
+    .price-label{color:var(--muted);font-size:10px;letter-spacing:2px;text-transform:uppercase}
+    .price{font:800 62px Manrope,sans-serif;letter-spacing:-3px;color:var(--gold2);margin:2px 0}
+    .price small{font-size:17px;letter-spacing:0;color:#b6b7af;font-weight:500}
+    .price-note{font-size:12px;color:#a2a49c;margin-bottom:24px}
+    .how{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .step{border-top:1px solid var(--gold);padding-top:20px}
+    .step .n{color:var(--gold);font:700 12px Manrope,sans-serif;letter-spacing:2px}
+    .step h3{font-size:18px;margin:15px 0 8px;letter-spacing:-.5px}.step p{font-size:13px;color:var(--muted);margin:0}
+    .faq{max-width:820px}.faq details{border-bottom:1px solid rgba(255,255,255,.1);padding:19px 0}.faq summary{cursor:pointer;list-style:none;font-weight:600;font-size:14px;display:flex;justify-content:space-between;gap:15px}.faq summary:after{content:"+";color:var(--gold);font-size:20px;font-weight:400}.faq details[open] summary:after{content:"−"}.faq details p{color:var(--muted);font-size:13px;max-width:700px}
+    .disclaimer{padding:24px;border:1px solid rgba(255,255,255,.08);background:#0e1010;border-radius:10px;color:#898d85;font-size:11px;line-height:1.8}
+    footer{border-top:1px solid var(--line);padding:30px 0 38px;color:#858981;font-size:11px}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footerlinks{display:flex;gap:18px}.footerlinks a:hover{color:var(--gold2)}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr;gap:40px}.hero{padding:72px 0}.terminal{max-width:620px;transform:none}.features{grid-template-columns:1fr 1fr}.offer-card{grid-template-columns:1fr}.price-panel{border-left:0;border-top:1px solid var(--line);padding:34px 40px}.navlinks{display:none}}
+    @media(max-width:560px){.wrap{width:min(100% - 30px,1160px)}.nav{height:68px}.nav .btn{padding:10px 12px;font-size:11px}.hero{padding:56px 0}.hero-grid{gap:30px}h1{font-size:44px}.lead{font-size:14px}.terminal{padding:12px}.statrow{gap:6px}.stat{padding:10px}.stat b{font-size:15px}.stat span{font-size:8px}.ticker-inner{gap:10px;font-size:9px}section{padding:64px 0}.features,.how{grid-template-columns:1fr}.feature{min-height:auto}.number{margin-bottom:16px}.offer-copy{padding:28px 23px}.price-panel{padding:28px 23px}.price{font-size:54px}.footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
 </head>
 <body>
-<header class="wrap">
-  <nav class="nav" aria-label="Main navigation">
-    <a class="brand" href="#top" style="text-decoration:none">TRADE <span>WITH NJ</span></a>
-    <div class="navlinks"><a href="#inside">What's inside</a><a href="#buy">Get the guide</a><a href="#faq">FAQ</a></div>
-  </nav>
-</header>
-<main id="top" class="wrap">
-  <section class="hero">
-    <div>
-      <span class="eyebrow">Trading education • Digital PDF</span>
-      <h1>Trade with a plan.<br><em>Not a guess.</em></h1>
-      <p class="lead">A practical strategy guide designed to help you understand a repeatable trading setup, review chart examples and think carefully about risk.</p>
-      <div class="actions">
-        <!-- Replace YOUR_PAYMENT_LINK with your live payment link before publishing -->
-        <a class="btn primary" href="#buy">Get the PDF — ₹99</a>
-        <a class="btn secondary" href="#inside">See what's included</a>
+  <div class="topline"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top"><span class="mark">NJ</span><span>TRADE WITH NJ<small>Structure over impulse</small></span></a>
+      <nav class="navlinks"><a href="#method">The Method</a><a href="#inside">What’s Inside</a><a href="#faq">FAQ</a></nav>
+      <a class="btn" href="#offer">Explore the guide <span>↗</span></a>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">A practical trading guide</div>
+          <h1>Trade with a plan.<br><span>Not emotion.</span></h1>
+          <p class="lead">A focused digital guide for traders who want a clearer process for reading setups, managing risk, and executing with discipline. Built around rules—not promises.</p>
+          <div class="hero-actions"><a class="btn" href="#offer">Get the guide — ₹99 <span>↗</span></a><a class="btn btn-ghost" href="#inside">See what’s inside</a></div>
+          <p class="micro">Instant digital product after payment and delivery setup · Educational use only</p>
+        </div>
+        <div class="terminal" aria-label="Decorative trading chart illustration">
+          <div class="terminal-top"><span>Market structure / Study view</span><span class="live">Illustration</span></div>
+          <svg class="chart" viewBox="0 0 520 300" role="img" aria-label="Illustrative candlestick chart with support and resistance levels">
+            <defs><pattern id="grid" width="40" height="36" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 36" fill="none" stroke="#2a302c" stroke-width="1"/></pattern><linearGradient id="glow" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d8b56d" stop-opacity=".15"/><stop offset="1" stop-color="#d8b56d" stop-opacity="0"/></linearGradient></defs>
+            <rect width="520" height="300" fill="url(#grid)"/>
+            <rect x="0" y="92" width="520" height="28" fill="#d8b56d" opacity=".06"/><line x1="0" y1="106" x2="520" y2="106" stroke="#d8b56d" stroke-dasharray="5 6" opacity=".75"/>
+            <line x1="0" y1="220" x2="520" y2="220" stroke="#9bc8a2" stroke-dasharray="5 6" opacity=".65"/>
+            <path d="M15 225 L45 210 L75 224 L105 181 L135 195 L165 155 L195 176 L225 139 L255 151 L285 112 L315 137 L345 96 L375 116 L405 79 L435 99 L465 61 L505 73 L505 300 L15 300Z" fill="url(#glow)"/>
+            <g stroke-width="2">
+              <path d="M35 203 V248 M27 218 H43 M27 234 H43" stroke="#9bc8a2"/><rect x="29" y="218" width="12" height="16" fill="#9bc8a2"/>
+              <path d="M70 190 V232" stroke="#d66f64"/><rect x="64" y="199" width="12" height="22" fill="#d66f64"/>
+              <path d="M105 165 V212" stroke="#9bc8a2"/><rect x="99" y="177" width="12" height="23" fill="#9bc8a2"/>
+              <path d="M140 160 V206" stroke="#d66f64"/><rect x="134" y="170" width="12" height="25" fill="#d66f64"/>
+              <path d="M175 135 V185" stroke="#9bc8a2"/><rect x="169" y="146" width="12" height="28" fill="#9bc8a2"/>
+              <path d="M210 126 V170" stroke="#d66f64"/><rect x="204" y="138" width="12" height="20" fill="#d66f64"/>
+              <path d="M245 102 V154" stroke="#9bc8a2"/><rect x="239" y="111" width="12" height="29" fill="#9bc8a2"/>
+              <path d="M280 96 V144" stroke="#9bc8a2"/><rect x="274" y="107" width="12" height="22" fill="#9bc8a2"/>
+              <path d="M315 77 V126" stroke="#d66f64"/><rect x="309" y="88" width="12" height="24" fill="#d66f64"/>
+              <path d="M350 70 V119" stroke="#9bc8a2"/><rect x="344" y="78" width="12" height="28" fill="#9bc8a2"/>
+              <path d="M385 52 V98" stroke="#9bc8a2"/><rect x="379" y="60" width="12" height="26" fill="#9bc8a2"/>
+              <path d="M420 43 V91" stroke="#d66f64"/><rect x="414" y="55" width="12" height="22" fill="#d66f64"/>
+              <path d="M455 28 V76" stroke="#9bc8a2"/><rect x="449" y="38" width="12" height="28" fill="#9bc8a2"/>
+              <path d="M490 35 V83" stroke="#9bc8a2"/><rect x="484" y="43" width="12" height="22" fill="#9bc8a2"/>
+            </g>
+            <text x="12" y="98" fill="#d8b56d" font-size="9" letter-spacing="1">REFERENCE LEVEL</text><text x="12" y="212" fill="#9bc8a2" font-size="9" letter-spacing="1">RISK LEVEL</text>
+          </svg>
+          <div class="chart-caption"><span>Illustrative chart — not a live market feed</span><span>PROCESS / 01</span></div>
+          <div class="statrow"><div class="stat"><b>01</b><span>Plan</span></div><div class="stat"><b>02</b><span>Manage risk</span></div><div class="stat"><b>03</b><span>Review</span></div></div>
+        </div>
       </div>
-      <p class="small">One-time price • Digital product • No profit guarantees</p>
-    </div>
-    <div class="visual" aria-label="Illustrated trading guide cover">
-      <div class="book">
-        <div><div class="mark">TRADE WITH NJ / FIELD GUIDE 01</div><h2>THE TRADING<br><span style="color:var(--gold)">STRATEGY</span><br>PLAYBOOK</h2><p>Rules • Chart examples • Risk management</p></div>
-        <div><div class="chart" aria-hidden="true"><i class="candle" style="height:34%"></i><i class="candle" style="height:53%"></i><i class="candle" style="height:42%"></i><i class="candle" style="height:72%"></i><i class="candle" style="height:61%"></i><i class="candle" style="height:84%"></i><i class="candle" style="height:67%"></i><i class="candle" style="height:91%"></i><i class="candle" style="height:75%"></i></div><p style="font-size:.72rem;letter-spacing:.13em">EDUCATION • DISCIPLINE • PROCESS</p></div>
+    </section>
+    <div class="ticker"><div class="wrap ticker-inner"><span><strong>01</strong> Clear rules</span><span><strong>02</strong> Risk first</span><span><strong>03</strong> Patient execution</span><span><strong>04</strong> Consistent review</span></div></div>
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">The philosophy</div><h2>A repeatable process beats a rushed decision.</h2><p>The goal is not to promise profits. It is to help you approach each trade with a defined plan, controlled risk, and a review process.</p></div>
+        <div class="features">
+          <article class="feature"><div class="number">01 / SETUP</div><h3>Know what you’re looking for</h3><p>Document the conditions that make a setup valid, and the conditions that mean you should stay out.</p></article>
+          <article class="feature"><div class="number">02 / RISK</div><h3>Define risk before entry</h3><p>Think about position sizing, invalidation, and acceptable loss before deciding whether to take a trade.</p></article>
+          <article class="feature"><div class="number">03 / DISCIPLINE</div><h3>Follow your own rules</h3><p>Use a checklist and a journal to reduce impulsive decisions and review execution objectively.</p></article>
+        </div>
       </div>
-    </div>
-  </section>
-  <section id="inside" class="section">
-    <h2>What you'll learn</h2>
-    <p class="sub">Replace or refine these points to match what your final PDF actually teaches. Only advertise features that are included in your product.</p>
-    <div class="grid">
-      <article class="card"><div class="ico">↗</div><h3>Setup rules</h3><p>Understand the conditions that must be present before considering a trade, and when to stay out.</p></article>
-      <article class="card"><div class="ico">⌖</div><h3>Chart walkthroughs</h3><p>Review annotated examples that explain the setup step by step, including invalid examples if available.</p></article>
-      <article class="card"><div class="ico">◇</div><h3>Risk management</h3><p>Learn why position sizing, stop-loss planning and protecting capital matter. No setup wins every time.</p></article>
-    </div>
-  </section>
-  <section id="buy" class="section">
-    <div class="buybox">
-      <div><span class="eyebrow">Digital guide</span><h2 style="margin:13px 0 7px">The Trading Strategy PDF</h2><p class="sub" style="margin:0">A downloadable educational guide from Trade With NJ. Read the product description and policies before buying.</p></div>
-      <div style="text-align:center"><div class="price">₹99<small>one-time payment</small></div><div style="margin-top:17px">
-        <!-- IMPORTANT: replace # with your approved live payment link -->
-        <a id="buyButton" class="btn primary" href="#" rel="nofollow">Payment link coming soon</a>
-      </div></div>
-    </div>
-    <p class="small">The PDF is being prepared. Do not accept payment until the guide is complete and the button links to your verified payment page.</p>
-  </section>
-  <section class="section">
-    <h2>How it works</h2><p class="sub">A simple buying process, once payment and delivery are configured.</p>
-    <div class="steps">
-      <div class="step"><h3>Review the guide</h3><p>Check the product description, contents and sample pages before purchasing.</p></div>
-      <div class="step"><h3>Pay securely</h3><p>Complete the ₹99 payment on the payment provider's hosted checkout.</p></div>
-      <div class="step"><h3>Receive your PDF</h3><p>Follow the delivery instructions provided after your payment is verified.</p></div>
-    </div>
-  </section>
-  <section id="faq" class="section">
-    <h2>Before you buy</h2>
-    <div class="faq">
-      <details><summary>Is profit guaranteed?</summary><p>No. Trading involves risk, losses can occur, and no strategy guarantees profits or a specific win rate.</p></details>
-      <details><summary>Is this financial advice?</summary><p>This product is intended as general educational material, not personalized investment advice, trade calls or a recommendation to buy or sell any financial instrument.</p></details>
-      <details><summary>How do I receive the PDF?</summary><p>Delivery details will be shown here once the seller has configured and tested the payment and delivery process. Do not pay while delivery is not ready.</p></details>
-      <details><summary>Can I request a refund?</summary><p>Read the seller's published refund policy before paying. Add a clear, lawful policy and support contact before launch.</p></details>
-    </div>
-  </section>
-  <section class="section">
-    <div class="notice"><strong>Risk disclosure:</strong> Trading in forex, derivatives, stocks, cryptoassets and other markets can result in substantial losses. This PDF is educational and does not guarantee results. Past examples do not predict future performance. Ensure all claims and the product itself comply with applicable Indian laws and platform rules.</div>
-  </section>
-</main>
-<footer class="footer"><div class="wrap">
-  <div class="footerlinks"><a href="#faq">FAQ</a><a href="mailto:YOUR_SUPPORT_EMAIL">Contact support</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms & refund policy</a></div>
-  <div>© <span id="year"></span> Trade With NJ. All rights reserved.</div>
-  <p>Educational content only. Not investment advice. Trading involves risk.</p>
-</div></footer>
-<script>
-document.getElementById('year').textContent = new Date().getFullYear();
-// Before launch, replace this with your real payment URL.
-// Example: document.getElementById('buyButton').href = 'https://your-approved-payment-link';
-</script>
+    </section>
+    <section id="inside" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Inside the guide</div><h2>Simple. Focused. Built for study.</h2><p>Replace these draft topics with the exact contents of your finished PDF before accepting payments.</p></div>
+        <div class="features">
+          <article class="feature"><div class="number">CHAPTER 01</div><h3>Setup framework</h3><p>A structured way to define a trade idea and the conditions you want to see.</p></article>
+          <article class="feature"><div class="number">CHAPTER 02</div><h3>Risk management</h3><p>Risk planning, invalidation levels, and why protecting capital matters.</p></article>
+          <article class="feature"><div class="number">CHAPTER 03</div><h3>Execution checklist</h3><p>A pre-trade and post-trade routine to help you review decisions consistently.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="offer" id="offer">
+      <div class="wrap offer-card">
+        <div class="offer-copy"><div class="eyebrow">The digital guide</div><h2>Build your process.<br>One trade at a time.</h2><p>A concise trading education PDF to study at your own pace. Read the details and risk disclosure before purchasing.</p><ul class="checks"><li>Digital PDF format</li><li>Setup and risk-planning concepts</li><li>Checklist-based approach</li><li>For educational purposes only</li></ul><a class="btn" href="#" aria-label="Purchase link not connected yet" onclick="alert('The payment link has not been connected yet. Please check back later.');return false;">Payment link coming soon <span>↗</span></a><p class="micro">Do not publish for sales until the PDF, payment link, and delivery process are ready.</p></div>
+        <div class="price-panel"><div class="price-label">Introductory price</div><div class="price">₹99 <small>INR</small></div><div class="price-note">One-time payment · Digital product</div><div style="border-top:1px solid var(--line);width:100%;padding-top:18px;color:#9c9f97;font-size:12px">Secure checkout will be linked here once configured.</div></div>
+      </div>
+    </section>
+    <section id="how" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">How it works</div><h2>Clear steps. No confusion.</h2></div>
+        <div class="how"><div class="step"><div class="n">STEP 01</div><h3>Review the guide</h3><p>Read the product details and confirm it matches what you want to learn.</p></div><div class="step"><div class="n">STEP 02</div><h3>Pay through checkout</h3><p>Use the connected payment provider. Only a confirmed payment should count as paid.</p></div><div class="step"><div class="n">STEP 03</div><h3>Receive the PDF</h3><p>Delivery instructions will be displayed once a verified delivery method is configured.</p></div></div>
+      </div>
+    </section>
+    <section id="faq" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Good to know</div><h2>Frequently asked questions</h2></div>
+        <div class="faq">
+          <details><summary>Is this a profit guarantee?</summary><p>No. There are no guaranteed returns. Trading involves risk and you can lose money. The guide is educational material, not a promise of results.</p></details>
+          <details><summary>Will I get the PDF immediately?</summary><p>Digital delivery is not active yet. The seller should connect and test a reliable delivery process before accepting payments.</p></details>
+          <details><summary>Is this personal financial advice?</summary><p>No. This material is intended for general education and is not personalized investment advice or a recommendation to buy or sell any instrument.</p></details>
+          <details><summary>What should I know before buying?</summary><p>Review the final product description, terms, privacy policy, and refund policy before purchasing. Contact details and support arrangements should be added before launch.</p></details>
+        </div>
+      </div>
+    </section>
+    <section style="padding-top:0">
+      <div class="wrap disclaimer"><strong style="color:#c8c8be">Risk disclosure</strong><br>Trading and leveraged products involve substantial risk and may not be suitable for everyone. Past performance does not guarantee future results. This website and any associated PDF are for educational purposes only and do not constitute personalized financial, investment, or trading advice. Never trade with money you cannot afford to lose. Confirm that your product, marketing, payment, and services comply with applicable laws and platform/provider requirements.</div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><a class="brand" href="#top"><span class="mark">NJ</span><span>TRADE WITH NJ<small>Structure over impulse</small></span></a><div class="footerlinks"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="#faq">FAQ</a></div><span>© <span id="year"></span> Trade With NJ</span></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
